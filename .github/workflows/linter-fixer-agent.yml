@@ -1,0 +1,37 @@
+name: Gemini lint fixes
+
+on:
+  workflow_run:
+    workflows:
+      - Lint
+    types:
+      - completed
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  fix-lint:
+    if: github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Apply Gemini lint fixes
+        uses: google-github-actions/run-gemini-cli@v0
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          prompt: |
+            look in the .github/lint-reports for the latest super-linter-summary.md file, investigate what changes need to be made and ONLY make the appropriate changes to fix the issues the linter has identified.
+
+      - name: Commit Java fixes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: master
+          file_pattern: src
+          commit_message: "chore: apply Gemini lint fixes"
