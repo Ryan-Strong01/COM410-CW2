@@ -27,15 +27,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SAVE_SUPER_LINTER_SUMMARY: true
-          SAVE_SUPER_LINTER_OUTPUT: false
+          SAVE_SUPER_LINTER_OUTPUT: true
           DEFAULT_WORKSPACE: ${{ github.workspace }}
           SUPER_LINTER_OUTPUT_DIRECTORY_NAME: .github/lint-reports
           VALIDATE_JAVA: true
-          FILTER_REGEX_INCLUDE: .*src/.*\.java$ # look in all of src folder for java files
+          FILTER_REGEX_INCLUDE: '.*src/.*\.java$' # look in all of src folder for java files
       - name: Persist lint reports
         if: always()
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           branch: master
-          file_pattern: .github/lint-reports/super-linter-summary.md
+          file_pattern: .github/lint-reports/*
           commit_message: "ACTIONS CHORE: persist lint reports"
