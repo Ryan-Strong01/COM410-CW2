@@ -6,7 +6,7 @@
 
 Super-linter detected linting errors
 
-For more information, see the [GitHub Actions workflow run](https://github.com/Ryan-Strong01/COM410-CW2/actions/runs/43881963424)
+For more information, see the [GitHub Actions workflow run](https://github.com/Ryan-Strong01/COM410-CW2/actions/runs/43883442486)
 
 Powered by [Super-linter](https://github.com/super-linter/super-linter)\
 Super-linter revision: `2da136927bd4a73596db63044b504547c62cb854`\
@@ -18,6 +18,22 @@ Super-linter version: `9.0.0`
 
 ```text
 Starting audit...
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:1: Missing package-info.java file. [JavadocPackage]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:9:47: Using the '.*' form of import should be avoided - org.junit.jupiter.api.Assertions.*. [AvoidStarImport]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:13:5: Missing a Javadoc comment for 'canInitialiseDeck'. [MissingJavadocMethod]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:19:5: Missing a Javadoc comment for 'deckHasFiftyTwoCards'. [MissingJavadocMethod]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:22:22: '52' is a magic number. [MagicNumber]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:25:5: Missing a Javadoc comment for 'canDrawOnlyFiftyTwoCards'. [MissingJavadocMethod]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:28:30: '53' is a magic number. [MagicNumber]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:29:22: '52' is a magic number. [MagicNumber]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:37:5: Missing a Javadoc comment for 'shuffleShouldChangeDeckOrder'. [MissingJavadocMethod]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:42:39: ',' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:46: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:47: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:48: Line is longer than 80 characters (found 102). [LineLength]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:51:5: Missing a Javadoc comment for 'shuffleShouldRandomlySortDecks'. [MissingJavadocMethod]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:57:35: '32' is a magic number. [MagicNumber]
+[ERROR] /github/workspace/src/test/java/models/DeckTest.java:60:35: '45' is a magic number. [MagicNumber]
 [ERROR] /github/workspace/src/main/java/models/Card.java:1: Missing package-info.java file. [JavadocPackage]
 [ERROR] /github/workspace/src/main/java/models/Card.java:6:5: Missing a Javadoc comment for 'Type'. [JavadocVariable]
 [ERROR] /github/workspace/src/main/java/models/Card.java:6:11: 'private' modifier out of order with the JLS suggestions. [ModifierOrder]
@@ -70,7 +86,6 @@ Starting audit...
 [ERROR] /github/workspace/src/main/java/models/Deck.java:42:5: Class 'Deck' looks like designed for extension (can be subclassed), but the method 'getCards' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Deck' final or making the method 'getCards' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
 [ERROR] /github/workspace/src/main/java/models/Deck.java:42:5: Missing a Javadoc comment for 'getCards'. [MissingJavadocMethod]
 [ERROR] /github/workspace/src/main/java/models/Deck.java:46:5: Class 'Deck' looks like designed for extension (can be subclassed), but the method 'toString' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Deck' final or making the method 'toString' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] /github/workspace/src/test/java/models/CardTest.java:1: Missing package-info.java file. [JavadocPackage]
 [ERROR] /github/workspace/src/test/java/models/CardTest.java:6:47: Using the '.*' form of import should be avoided - org.junit.jupiter.api.Assertions.*. [AvoidStarImport]
 [ERROR] /github/workspace/src/test/java/models/CardTest.java:10:5: Missing a Javadoc comment for 'canInitialiseCard'. [MissingJavadocMethod]
 [ERROR] /github/workspace/src/test/java/models/CardTest.java:16:5: Missing a Javadoc comment for 'initialisingCardWithNullThrowsException'. [MissingJavadocMethod]
@@ -92,21 +107,6 @@ Starting audit...
 [ERROR] /github/workspace/src/test/java/models/CardTest.java:45:23: '{' is not followed by whitespace. [WhitespaceAround]
 [ERROR] /github/workspace/src/test/java/models/CardTest.java:45:50: ';' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] /github/workspace/src/test/java/models/CardTest.java:45:51: '}' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:9:47: Using the '.*' form of import should be avoided - org.junit.jupiter.api.Assertions.*. [AvoidStarImport]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:13:5: Missing a Javadoc comment for 'canInitialiseDeck'. [MissingJavadocMethod]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:19:5: Missing a Javadoc comment for 'deckHasFiftyTwoCards'. [MissingJavadocMethod]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:22:22: '52' is a magic number. [MagicNumber]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:25:5: Missing a Javadoc comment for 'canDrawOnlyFiftyTwoCards'. [MissingJavadocMethod]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:28:30: '53' is a magic number. [MagicNumber]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:29:22: '52' is a magic number. [MagicNumber]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:37:5: Missing a Javadoc comment for 'shuffleShouldChangeDeckOrder'. [MissingJavadocMethod]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:42:39: ',' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:46: Line is longer than 80 characters (found 93). [LineLength]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:47: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:48: Line is longer than 80 characters (found 102). [LineLength]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:51:5: Missing a Javadoc comment for 'shuffleShouldRandomlySortDecks'. [MissingJavadocMethod]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:57:35: '32' is a magic number. [MagicNumber]
-[ERROR] /github/workspace/src/test/java/models/DeckTest.java:60:35: '45' is a magic number. [MagicNumber]
 Audit done.Checkstyle ends with 89 errors.
 ```
 
