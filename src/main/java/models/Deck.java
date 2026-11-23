@@ -1,9 +1,21 @@
 package models;
-import java.util.*;
 
-public class Deck {
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Random;
+
+/**
+ * Represents a standard deck of playing cards.
+ */
+public final class Deck {
+    /** The cards currently remaining in the deck. */
     private final List<Card> cards;
 
+    /**
+     * Creates and initialises a standard deck.
+     */
     public Deck() {
         cards = new ArrayList<>();
         initialiseDeck();
@@ -17,16 +29,28 @@ public class Deck {
         }
     }
 
+    /**
+     * Shuffles the deck using a randomly generated source of randomness.
+     */
     public void shuffleDeck() {
         Collections.shuffle(cards);
     }
 
-    public void shuffleDeck(Random seed) {
+    /**
+     * Shuffles the deck using the supplied source of randomness.
+     *
+     * @param seed the source of randomness
+     */
+    public void shuffleDeck(final Random seed) {
         Collections.shuffle(cards, seed);
     }
-    // make an overloaded approach to shuffling deck which I can pass the random seed for
-    // this makes it easier for me to test since I can pre-determine the results
 
+    /**
+     * Draws and removes the top card from the deck.
+     *
+     * @return the drawn card
+     * @throws NoSuchElementException when the deck is empty
+     */
     public Card drawCard() throws NoSuchElementException {
         if (cards.isEmpty()) {
             throw new NoSuchElementException("deck is empty");
@@ -35,14 +59,29 @@ public class Deck {
         return cards.removeLast();
     }
 
+    /**
+     * Returns the number of cards remaining in the deck.
+     *
+     * @return the deck length
+     */
     public int getLength() {
         return cards.size();
     }
 
+    /**
+     * Returns a snapshot of the cards remaining in the deck.
+     *
+     * @return the cards remaining in the deck
+     */
     public List<Card> getCards() {
         return List.copyOf(cards);
     }
 
+    /**
+     * Returns the number of cards in the deck.
+     *
+     * @return the deck representation
+     */
     @Override
     public String toString() {
         return "Length: " + cards.size();

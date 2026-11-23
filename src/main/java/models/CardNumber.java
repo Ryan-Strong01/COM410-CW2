@@ -1,5 +1,30 @@
 package models;
 
 public enum CardNumber {
-    ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
+    /** Ace. */
+    ACE,
+    /** Two. */
+    TWO,
+    /** Three. */
+    THREE,
+    /** Four. */
+    FOUR,
+    /** Five. */
+    FIVE,
+    /** Six. */
+    SIX,
+    /** Seven. */
+    SEVEN,
+    /** Eight. */
+    EIGHT,
+    /** Nine. */
+    NINE,
+    /** Ten. */
+    TEN,
+    /** Jack. */
+    JACK,
+    /** Queen. */
+    QUEEN,
+    /** King. */
+    KING
 }

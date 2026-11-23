@@ -1,5 +1,12 @@
 package models;
 
 public enum CardType {
-    HEARTS, DIAMONDS, CLUBS, SPADES
+    /** Hearts. */
+    HEARTS,
+    /** Diamonds. */
+    DIAMONDS,
+    /** Clubs. */
+    CLUBS,
+    /** Spades. */
+    SPADES
 }
