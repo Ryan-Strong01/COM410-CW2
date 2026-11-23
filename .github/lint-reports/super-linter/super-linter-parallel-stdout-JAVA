@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] /github/workspace/src/main/java/models/Card.java:20:32: 'type' hides a field. [HiddenField]
-[ERROR] /github/workspace/src/main/java/models/Card.java:20:55: 'number' hides a field. [HiddenField]
 Audit done.
