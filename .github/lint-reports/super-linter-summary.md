@@ -6,7 +6,7 @@
 
 Super-linter detected linting errors
 
-For more information, see the [GitHub Actions workflow run](https://github.com/Ryan-Strong01/COM410-CW2/actions/runs/45183737411)
+For more information, see the [GitHub Actions workflow run](https://github.com/Ryan-Strong01/COM410-CW2/actions/runs/45184138552)
 
 Powered by [Super-linter](https://github.com/super-linter/super-linter)\
 Super-linter revision: `2da136927bd4a73596db63044b504547c62cb854`\
