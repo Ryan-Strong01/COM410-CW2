@@ -14,12 +14,12 @@ public final class Card {
     /**
      * Creates a card.
      *
-     * @param type the card type
-     * @param number the card number
+     * @param cardType the card type
+     * @param cardNumber the card number
      */
-    public Card(final CardType type, final CardNumber number) {
-        this.type = Objects.requireNonNull(type);
-        this.number = Objects.requireNonNull(number);
+    public Card(final CardType cardType, final CardNumber cardNumber) {
+        this.type = Objects.requireNonNull(cardType);
+        this.number = Objects.requireNonNull(cardNumber);
     }
 
     /**
